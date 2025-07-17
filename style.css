@@ -28,8 +28,9 @@ header {
 }
 
 header.scrolled {
-  background-color: #333;
+  background-color: #121212;
 }
+
 
 .title h1 {
   color: #ff720d;
@@ -641,8 +642,8 @@ padding: 20px;
   object-fit: cover;
 }
 
-/* Make .aboutSection img fullscreen on phone size */
-@media (max-width: 480px) {
+/* Make .aboutSection img fullscreen on phone and tablet size */
+@media (max-width: 768px) {
   .aboutSection {
     flex-direction: column;
     padding: 0;
