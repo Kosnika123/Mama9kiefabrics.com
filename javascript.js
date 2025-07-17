@@ -21,3 +21,19 @@ if (closeSidebar && navLinks) {
     navLinks.classList.remove('show');
   });
 }
+
+const header = document.querySelector('.header');
+const videoSection = document.querySelector('.video-container')
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const videoSectionTop = videoSection.offsetTop + videoSection.offsetHeight;
+
+    if (scrollPosition > videoSectionTop){
+        header.classList.add('scrolled');
+    }
+
+    else {
+        header.classList.remove('scrolled');
+    }
+});
