@@ -152,6 +152,7 @@ width: 290px;
 box-shadow: 3px 4px 18px -4px ;
 }
 
+
 .trendCard img{
 width: 100%;
     border-radius: 4px;
@@ -241,23 +242,47 @@ width: 100%;
 }
 
 .section4{
-   background-color: #1f1f1f;
-  padding: 40px;
+padding: 20px;  
+background-color: #1f1f1f;
+}
+
+.section4 h1,p{
+  text-align: center;
+ 
+}
+
+.box-container{
   display: flex;
-  justify-content: space-between;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.Custormer h1{
-  font-size: 32px;
-}
-
-.CustermerBox{
+.customerWords{
   background-color: #ff720d;
-  width: 320px;
-  height: 230px;
-  margin-top: 30px;
-  padding: 12px;
-  border-radius: 14px;
+border: 1px solid #ddd;
+border-radius: 8px;
+padding: 17px;
+text-align: center;
+width: 290px;
+box-shadow: 3px 4px 18px -4px ;
+}
+
+.customerImg{
+  display: flex;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.customerImg img{
+width: 90px;
+height: 90px;
+object-fit: cover;
+border-radius: 100px;
+}
+
+.customerImg h4{
+  padding-top: 38px;
 }
 
 .section5{
@@ -353,22 +378,30 @@ footer {
 }
 }
 
+@media(max-width:580px){
+  .Flex{
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 768px) {
 
 
 
   .nav-links {
     display: none;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 50px;
     right: 0;
-    height: 100vh;
-    width: 200px;
-    background-color: #1f1f1f;
-    padding: 2em 1em;
+    height: 340px;
+    width: 100%;
+    background-color:  rgba(9, 9, 9, 0.897);
+    padding: 1em 1em;
     flex-direction: column;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.7);
-    z-index: 1001;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.316);
+    z-index: -1;
+    margin-top: 10px;
+     animation: float-up 2s ease-in-out ;
   }
 
   .nav-links.show {
@@ -378,6 +411,7 @@ footer {
   .nav-links a {
     margin: 15px 0;
     font-size: 1.2rem;
+     text-align: center;
   }
 
   .nav-toggle {
@@ -401,6 +435,10 @@ footer {
   left: 7%;
   font-size: 21px;
   top: 10%;
+}
+
+.section2-img img{
+  height: 600px !important;
 }
 
 }
@@ -511,7 +549,9 @@ footer {
     flex-direction: column;
   }
 
-
+#reshape{
+  height: 400px;
+}
 
 }
 
@@ -519,6 +559,16 @@ footer {
   .section5-text{
     top: 30%;
   }
+
+  .reFlex{
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+
+.Mission-img img{
+  width: 100%;
+}
+
 }
 
 @media (max-width: 451px){
@@ -603,7 +653,7 @@ footer {
 /* About Us Page */
 .hero1{
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/AboutUs/About2.jpg') no-repeat center center/cover;
-  height: 440px;
+  height: 540px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -630,16 +680,190 @@ footer {
 
 .aboutSection{
   display: flex;
-gap: 40px;
-padding: 18px;
-background-color: #1f1f1f;
-padding: 20px;
+  gap: 40px;
+  padding: 18px;
+  background-color: #1f1f1f;
+  padding: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .aboutSection img{
   width: 61%;
-  height: 410px;
+  height: 440px;
   object-fit: cover;
+  margin-top: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.OurText {
+  width: 35%;
+  color: #f5f5f5;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 10px 20px;
+}
+
+.OurText h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.OurText ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.motto {
+  border-top: 1px solid #333;
+  padding: 20px;
+  font-style: italic;
+  font-size: 1rem;
+  color: #ff720d;
+  text-align: center;
+}
+
+.founder {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.founder img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.founderName p {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.founderName span {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive improvements for About page */
+@media (max-width: 1024px) {
+  .aboutSection {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .aboutSection img,
+  .OurText {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .OurText {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero1-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero1-content p {
+    font-size: 1rem;
+  }
+
+  .OurText h2 {
+    font-size: 1.5rem;
+  }
+
+  .OurText p,
+  .OurText ol {
+    font-size: 1rem;
+  }
+
+  .founder {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .founder img {
+    margin-bottom: 10px;
+  }
+}
+
+.founderName{
+  margin-top: 43px;
+}
+
+.Values{
+  background-color: #1f1f1f;
+  padding-top: 40px !important;
+  padding: 20px;
+}
+
+.Flex{
+display: flex;
+margin-top: 50px;
+   justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.Values h1{
+text-align: center;
+}
+
+.Value{
+  display: flex;
+  gap: 3px;
+    width: 240px;
+}
+
+.v-text h3{
+  text-align: center;
+}
+
+.Value span{
+  display: inline-block;
+color: #ff720d;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.Mission{
+  background-color: #1f1f1f;
+}
+
+.reFlex{
+  display: flex;
+  gap: 80px;
+}
+
+.Mission-text{
+  margin-left: 30px;
+  padding: 20px;
+}
+
+.Mission-text p{
+  text-align: left;
+}
+
+.Mission-img img{
+  width: 80%;
+}
+
+.range{
+  display: flex;
+  gap: 30px;
 }
 
 /* Make .aboutSection img fullscreen on phone and tablet size */
@@ -651,11 +875,13 @@ padding: 20px;
 
   .aboutSection img {
     width: 100vw;
-    height: 100vh;
+    height: 500px;
     object-fit: cover;
     margin: 0;
   }
+
 }
+
 
 .motto{
   border-top: 1px solid #333;
@@ -689,4 +915,39 @@ ol{
 .founderName span{
 font-style: italic;
 font-size: small;
+}
+
+@media(max-width:580px){
+  .Flex{
+     align-items: center;
+  }
+}
+
+/* contact Page */
+
+.hero2{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/contact/contact.jpeg') no-repeat center center/cover;
+  height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero2-content{
+  width: 80%;
+}
+
+.hero2-content h2 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero2-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
 }
