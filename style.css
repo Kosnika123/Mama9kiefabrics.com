@@ -930,7 +930,7 @@ font-size: small;
 /* contact Page */
 
 .hero2{
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('contact/contact.jpeg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/contact/contact.jpeg') no-repeat center center/cover;
   height: 520px;
   display: flex;
   justify-content: center;
@@ -1124,6 +1124,10 @@ padding: 27px;
     flex: 1 1 100%;
   }
 
+  #Galleryh2{
+  font-size: 27px;  
+  }
+
   /* Navigation menu toggle */
 
 
@@ -1194,4 +1198,72 @@ padding: 27px;
   .contact-form button {
     width: 100%;
   }
+}
+
+
+/* GalleryPage */
+
+.hero3{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('GalleryImg/Header.jpeg') no-repeat center center/cover;
+  height: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero3-content{
+  width: 80%;
+}
+
+.hero3-content h2 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero1-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+
+.container{
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #1f1f1f;
+}
+
+.product{
+background-color: #ff720d;
+border: none;
+border-radius: 8px;
+padding: 17px;
+text-align: center;
+width: 240px;
+position: relative;
+ box-shadow: 0 0 15px rgba(255, 114, 13, 0.5);
+}
+
+.product:hover{
+    transform: 0.3s ease-in;
+    transform: scale(1.1);
+}
+
+.product img{
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(90%);
+    border-radius: 10px;
+}
+
+.product p{
+color: #fff;
+font-weight: 800;
 }
