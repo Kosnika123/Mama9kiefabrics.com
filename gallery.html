@@ -43,9 +43,9 @@
 </main>
 <br> <br>
 
-<h1 style="text-align: center;"> Gallery </h1> <br>
+<h1 style="text-align: center;"> Our Products </h1> <br>
 
-<div class="container">
+<!-- <div class="container">
 
 
 <div class="product">
@@ -167,9 +167,92 @@
 <h2> Product N </h2> 
 <p> Price: #14,000 </p>
 </div>
+</div>
+-->
 
+<div class="gallery">
+<a href="#img1"><img src="GalleryImg/Gallery (1).jpg" alt="" loading="lazy"></a> 
+<a href="#img2"><img src="GalleryImg/Gallery (2).jpg" alt="" loading="lazy"></a>  
+<a href="#img3"><img src="GalleryImg/Gallery (3).jpg" alt="" loading="lazy"></a>  
+<a href="#img4"><img src="GalleryImg/Gallery (4).jpg" alt="" loading="lazy"></a>  
+<a href="#img5"><img src="GalleryImg/Gallery (5).jpg" alt="" loading="lazy"></a>  
+<a href="#img6"><img src="GalleryImg/Gallery (6).jpg" alt="" loading="lazy"></a> 
+<a href="#img7"><img src="GalleryImg/Gallery (7).jpg" alt="" loading="lazy"></a> 
+<a href="#img8"><img src="GalleryImg/Gallery (8).jpg" alt="" loading="lazy"></a> 
+<a href="#img9"><img src="GalleryImg/Gallery (9).jpg" alt="" loading="lazy"></a> 
+<a href="#img10"><img src="GalleryImg/Gallery (10).jpg" alt="" loading="lazy"></a> 
+<a href="#img11"><img src="GalleryImg/Gallery (11).jpg" alt="" loading="lazy"></a> 
+<a href="#img12"><img src="GalleryImg/Gallery (12).jpg" alt="" loading="lazy"></a> 
+</div>
 
-</div><br> <br>
+<div id="img1" class="lightbox">
+<a href="#" class="close">&times;</a>
+<img src="GalleryImg/Gallery (1).jpg" alt="">
+</div>
+
+<div id="img2" class="lightbox">
+<a href="#" class="close">&times;</a>
+<img src="GalleryImg/Gallery (2).jpg" alt="">
+</div>
+
+<div id="img3" class="lightbox">
+<a href="#" class="close">&times;</a>
+<img src="GalleryImg/Gallery (3).jpg" alt="">
+</div>
+
+<div id="img4" class="lightbox">
+<a href="#" class="close">&times;</a>
+<img src="GalleryImg/Gallery (4).jpg" alt="">
+</div>
+
+<div id="img5" class="lightbox">
+<a href="#" class="close">&times;</a>
+<img src="GalleryImg/Gallery (5).jpg" alt="">
+</div>
+
+<div id="img6" class="lightbox">
+<a href="#" class="close">&times;</a>
+<img src="GalleryImg/Gallery (6).jpg" alt="">
+</div>
+
+<div id="img7" class="lightbox">
+<a href="#" class="close">&times;</a>
+<img src="GalleryImg/Gallery (7).jpg" alt="">
+</div>
+
+<div id="img8" class="lightbox">
+<a href="#" class="close">&times;</a>
+<img src="GalleryImg/Gallery (8).jpg" alt="">
+</div>
+
+<div id="img9" class="lightbox">
+<a href="#" class="close">&times;</a>
+<img src="GalleryImg/Gallery (9).jpg" alt="">
+</div>
+
+<div id="img10" class="lightbox">
+<a href="#" class="close">&times;</a>
+<img src="GalleryImg/Gallery (10).jpg" alt="">
+</div>
+
+<div id="img11" class="lightbox">
+<a href="#" class="close">&times;</a>
+<img src="GalleryImg/Gallery (11).jpg" alt="">
+</div>
+
+<div id="img12" class="lightbox">
+<a href="#" class="close">&times;</a>
+<img src="GalleryImg/Gallery (12).jpg" alt="">
+</div>
+
+<br> <br>
+
+<div class="lightbox" id="lightbox">
+<button class="close" id="closeBtn">&times;</button>  
+<button class="prev" id="prevBtn">&#10094;</button>  
+<img id="lightboxImg" src="" alt="Preview">
+<button class="next" id="nextBtn"> &#10095; </button>
+</div>
 
 <section class="Social">
     <h4>     Follow Us @Mama9kie_Fabrics </h4> <br>
@@ -191,6 +274,46 @@
 </footer>
 
 <script src="javascript.js"></script>
+
+<script>
+ const images = document.querySelectorAll('.gallery img');
+ const lightbox = document.getElementById('lightbox');
+ const lightboxImg = document.getElementById('lightboxImg');
+ const closeBtn = document.getElementById('closeBtn');
+ const prevBtn = document.getElementById('prevBtn');
+ const nextBtn = document.getElementById('nextBtn');
+
+ let currentIndex = 0;
+
+ function showLightbox(index) {
+   currentIndex = index;
+   lightboxImg.src = images[index].src;
+   lightbox.classList.add('active')
+ }
+
+ images.forEach((img, index) => {
+img.addEventListener('click', () => showLightbox(index));
+ });
+
+ closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+ });
+
+ prevBtn.addEventListener('click', () => {
+    currentIndex= (currentIndex - 1 + images.length) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+ });
+
+ nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+ })
+
+document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape')lightbox.classList.remove('active');
+});
+
+</script>
 
 </body>
 </html>
