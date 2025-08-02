@@ -1375,7 +1375,7 @@ border-radius: 50%;
 
 .prev{
   top: 50%;
-  left: 30%;
+  left: 10%;
   transform: translateY(-50%);
 }
 
@@ -1384,3 +1384,4 @@ top: 50%;
 right: 30px;
 transform: translateY(-50%);
 }
+
