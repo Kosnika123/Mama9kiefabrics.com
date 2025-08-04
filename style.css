@@ -1206,7 +1206,7 @@ padding: 27px;
 
 .hero3{
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('GalleryImg/Header.jpeg') no-repeat center center/cover;
-  height: 540px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1384,4 +1384,5 @@ top: 50%;
 right: 30px;
 transform: translateY(-50%);
 }
+
 
