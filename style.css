@@ -533,7 +533,6 @@ footer {
   .Premier-img img {
     width: 100%;
    object-fit: cover;
-    height: 700px
   }
 
   .Premier-text {
@@ -1385,6 +1384,7 @@ top: 50%;
 right: 30px;
 transform: translateY(-50%);
 }
+
 
 
 
