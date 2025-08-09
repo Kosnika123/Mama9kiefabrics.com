@@ -216,7 +216,7 @@ width: 100%;
 
 .Premier-img img{
   width: 150%;
-  height: 470px;
+  height: 500px;
   object-fit: cover;
 }
 
@@ -1384,6 +1384,7 @@ top: 50%;
 right: 30px;
 transform: translateY(-50%);
 }
+
 
 
 
