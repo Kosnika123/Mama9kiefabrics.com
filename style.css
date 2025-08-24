@@ -864,7 +864,7 @@ color: #ff720d;
 
 .Mission-img img{
   width: 80%;
-}
+} 
 
 .range{
   display: flex;
@@ -884,7 +884,11 @@ color: #ff720d;
     object-fit: cover;
     margin: 0;
   }
+  
 
+.Mission-img img{
+  width: 100% !important;
+}  
 }
 
 
@@ -1384,6 +1388,7 @@ top: 50%;
 right: 30px;
 transform: translateY(-50%);
 }
+
 
 
 
